@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Chat Room</title>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -11,7 +14,29 @@
 <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-
+    
+        <button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button>
+        <br>
+            <div class="container" id="green">
+                <center>
+                    <h1 class="header">	
+                        Chat app	
+                        <sup>
+                            <img src="chat_app-removebg-preview.png">
+                        </sup>
+                    </h1>
+                    <div style="text-align: left;margin-bottom: 70px;"> </div>
+                </center>
+                <div id="output"></div>
+                <br><br>
+            </div>
+            
+            <center>
+                <div class="input_div_message_page">
+                    <label>Send:</label>
+                    <input id="msg" class="form-control" type="text" placeholder="Message">
+                    <button class="btn btn-success" onclick="send()">Send</button>
+    </div>
     </body>
     <script src="chat_room.js"></script>
 </html>

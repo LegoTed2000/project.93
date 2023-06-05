@@ -10,7 +10,7 @@ var firebaseConfig = {
   };
 
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+ firebase.initializeApp(firebaseConfig);
 
 function getData() {
     firebase.database().ref("/").on('value',function(snapshot) {
